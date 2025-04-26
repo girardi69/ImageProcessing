@@ -17,6 +17,10 @@ def start_camera_stream(camera_index=1):  # Default to index 1 for USB camera
         # Capture frame-by-frame
         ret, frame = cap.read()
         
+        #   .read(): This method reads the next frame from the video capture object. It returns two values:
+        #       ret: A boolean value that indicates whether the frame was successfully captured (True) or not (False).
+        #       frame: The actual frame captured from the video stream. This is usually an image represented as a multi-dimensional array.     
+
         # If frame is read correctly, ret is True
         if not ret:
             print("Error: Can't receive frame. Exiting...")
